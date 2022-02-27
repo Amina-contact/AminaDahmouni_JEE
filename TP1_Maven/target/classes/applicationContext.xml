@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--Créer un objet de la classe DaoImpl avec le nom dao-->
+    <bean id="dao" class="ext.DaoImplVWS"></bean>
+    <!-- lorsqu'on crée un objet metier on fait appelle à set
+         pour faire l'injection des dépendances via le setter-->
+    <bean id="metier" class="metier.MetierImpl">
+        <!-- <constructor-arg ref="dao"></constructor-arg> -->
+        <property name="dao" ref="dao"></property>
+    </bean>
+ </beans>
