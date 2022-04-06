@@ -12,7 +12,7 @@
         <div class="card">
             <div class="card-header  text-dark bg-info">Edit Patient</div>
             <div class="card-body">
-                <form method="post" th:action="@{save(page=${page},keyword=${keyword})}">
+                <form method="post" th:action="@{/admin/save(page=${page},keyword=${keyword})}">
                     <div>
                          <label >ID :</label>
                         <input   readonly="readonly" class="form-control mt-2 mb-1" name="id" th:value="${patient.id}">
