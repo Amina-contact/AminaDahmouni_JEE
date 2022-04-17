@@ -10,13 +10,13 @@
 </head>
 <body>
 <div layout:fragment="content1">
-<div class="col-md-6 offset-3 mt-2">
+<div class="col-md-6 offset-3 mt-1 mb-1">
     <div class="card">
         <div class="card-body">
             <form method="post" th:action="@{/admin/save(page=${page},keyword=${keyword})}">
                 <div>
                     <label >ID :</label>
-                    <input   readonly="readonly" class="form-control mb-1" name="id" th:value="${etudiant.id}">
+                    <input   readonly="readonly" class="form-control" name="id" th:value="${etudiant.id}">
                 </div>
                 <div>
                     <label for="nom">Nom</label>
@@ -38,7 +38,7 @@
                     <input class="form-control mt-1" type="date" name="dateNaissance" th:value="${etudiant.dateNaissance}">
                     <span class="text-danger" th:errors="${etudiant.dateNaissance}"></span>
                 </div>
-                <div>
+<!--                <div>
                     <label>Genre</label>
                 <select name="genre" class="form-select mt-1">
                     <option
@@ -47,12 +47,25 @@
                             th:value="${genreTT}">
                     </option>
                 </select>
-                </div>
-                <div>
-                    <label class="mt-1">Régle</label><br>
-                    <input  type="checkbox" class="mt-1" name="regle" th:checked="${etudiant.regle}">
+                </div>-->
+                <label for="genre" class="form-label">Genre</label>
+                <select class="form-select" id="genre" name="genre">
+                    <option disabled> Choisir le genre...</option>
+                    <option value="MASCULIN" th:selected="${etudiant.getGenre().ordinal()==0}"> Masculin</option>
+                    <option value="FEMININ" th:selected="${etudiant.getGenre().ordinal()==1}"> Féminin</option>
+                </select>
+                <span class="text-danger" th:errors="${etudiant.genre}"></span>
+
+                <div class="text-center">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" name="regle" th:checked="${etudiant.regle}" id="regle">
+                        <label class="form-check-label" for="regle">
+                            Régle
+                        </label>
+                    </div>
                     <span class="text-danger" th:errors="${etudiant.regle}"></span>
                 </div>
+
                  <a class="btn btn-secondary" th:href="@{/user/index}"
                         role="button"><i class="fa fa-window-close-o"></i> Annuler</a>
                 <button type="submit" class="btn btn-info"><i class="fa fa-check-square-o"></i> Enregistrer</button>

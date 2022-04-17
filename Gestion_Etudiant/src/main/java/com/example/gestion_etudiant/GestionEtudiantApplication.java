@@ -31,8 +31,8 @@ public class GestionEtudiantApplication {
             etudiantRepository.save(new Etudiant(null,"DAHMOUNI","Safae","safaedahmouni@gmail.com",new Date(), Genre.FEMININ,true));
             etudiantRepository.save(new Etudiant(null,"MOUTAWAKIL","Bader","badermoutawakil@gmail.com",new Date(), Genre.MASCULIN,false));
             etudiantRepository.save(new Etudiant(null,"SLIMANI","Houda","houdaslimani@gmail.com",new Date(), Genre.FEMININ,false));
-            etudiantRepository.save(new Etudiant(null,"AYOUJJIL","Soukayna","soukaynaayoujjil@gmail.com",new Date(), Genre.FEMININ,true));
-            etudiantRepository.save(new Etudiant(null,"KANDOUSSI","Rayan","rayankandoussi@gmail.com",new Date(), Genre.MASCULIN,false));
+            etudiantRepository.save(new Etudiant(null,"ALAOUI","Karim","Karimalaoui@gmail.com",new Date(), Genre.MASCULIN,true));
+            etudiantRepository.save(new Etudiant(null,"MOUTASSIM","Rayan","rayanmoutassim@gmail.com",new Date(), Genre.MASCULIN,false));
         };
     }
      //@Bean

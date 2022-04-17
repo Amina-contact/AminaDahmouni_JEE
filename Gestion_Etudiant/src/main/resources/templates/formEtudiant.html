@@ -10,7 +10,7 @@
 </head>
 <body>
 <div layout:fragment="content1">
-<div class="col-md-6 offset-3 mt-1">
+<div class="col-md-6 offset-3 mt-3">
     <div class="card">
         <div class="card-body">
             <form method="post" th:action="@{/admin/save}">
@@ -42,12 +42,18 @@
                         th:value="${genreTT}">
                     </option>
                 </select>
+                    <span class="text-danger" th:errors="${etudiant.genre}"></span>
                 </div>
-                <div>
-                    <label class="mt-1">Régle</label><br>
-                    <input  type="checkbox" class="mt-1" name="regle" th:checked="${etudiant.regle}">
+                <div class="mt-3 text-center">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" name="regle" th:checked="${etudiant.regle}" id="regle">
+                        <label class="form-check-label" for="regle">
+                            Régle
+                        </label>
+                    </div>
                     <span class="text-danger" th:errors="${etudiant.regle}"></span>
                 </div>
+
                 <br> <a class="btn btn-secondary" th:href="@{/user/index}"
                         role="button"><i class="fa fa-window-close-o"></i> Annuler</a>
                 <button type="submit" class="btn btn-info"><i class="fa fa-check-square-o"></i> Ajouter</button>
