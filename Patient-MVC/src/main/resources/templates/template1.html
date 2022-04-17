@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
+<html lang="en" xmlns:th="http://thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security" >
 <head>
@@ -23,7 +23,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Patient</a>
                     <ul class="dropdown-menu">
-                        <li sec:authorize="hasRole('ADMIN')"><a class="dropdown-item" th:href="@{/admin/formPatients}">New </a></li>
+                        <li sec:authorize="hasAuthority('ADMIN')"><a class="dropdown-item" th:href="@{/admin/formPatients}">New </a></li>
                         <li><a class="dropdown-item" th:href="@{/user/index}">Search</a></li>
                     </ul>
                 </li>
@@ -35,7 +35,7 @@
                         <span sec:authentication="name"></span>
                     </a>
                     <ul class="dropdown-menu" >
-                        <li><a class="dropdown-item" th:href="@{/logout}">Lougout</a></li>
+                        <li><a class="dropdown-item" th:href="@{/login?logout}">Lougout</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

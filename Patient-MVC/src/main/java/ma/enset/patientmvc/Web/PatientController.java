@@ -75,5 +75,9 @@ public class PatientController {
         model.addAttribute("keyword",keyword);
         return  "editPatient";
     }
+    @GetMapping("/login")
+    public String login(){
+        return "/login";
+    }
 
 }
