@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:laout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:layout="http://www.w3.org/1999/xhtml"
       layout:decorate="layout">
 <head>
     <meta charset="UTF-8">
-    <title>403</title>
+    <title>Etudiant</title>
 </head>
-<body>
+<body style="background-color:black;">
 <div layout:fragment="content1">
-    <div class="container mt-2">
-        <h2>Vous n'etes pas authorisé à accéder à cette ressource</h2>
+    <div class="py-5">
+        <div class="container" style="margin-top: -40px;margin-bottom: -40px; width: 90%;">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card text-white p-4 pt-5 bg-dark">
+                        <div class="card-body text-center">
+                            <img src="/images/stop.png">
+                            <h3 style="color:white;">403</h3>
+                            <h4 style="color:white;">Vous n'avez pas le droit d'acceder à ce ressource</h4>
+                            <a class="h4 text-light mx-2 btn-sm btn-primary"
+                               onclick='history.back();' href="javascript:void(0)">Retour</a>
+                            <a class="h4 text-light mx-2 btn-sm btn-primary" th:href="@{/}">Accueil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<h3>Vous n'êtes pas autorisé</h3>
+</div>
+
 </body>
 </html>

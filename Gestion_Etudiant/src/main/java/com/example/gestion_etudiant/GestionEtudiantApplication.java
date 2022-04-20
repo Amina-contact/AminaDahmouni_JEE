@@ -24,6 +24,7 @@ public class GestionEtudiantApplication {
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
     //@Bean
     CommandLineRunner commandLineRunner(EtudiantRepository etudiantRepository){
         return args -> {

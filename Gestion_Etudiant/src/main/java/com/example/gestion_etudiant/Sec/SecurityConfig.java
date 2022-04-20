@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.sql.DataSource;
 //Pour dire que c'est une classe de configuration
@@ -19,6 +20,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private DataSource dataSource;
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
+    @Autowired
+    PasswordEncoder passwordEncoder;
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
@@ -41,8 +44,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin().loginPage("/login");
-        //http.formLogin();
+        http.csrf().disable();
+        http.formLogin().loginPage("/login").permitAll();
+                        //http.formLogin();
         //ne necessite pas authentififcation
         http.authorizeRequests().antMatchers("/").permitAll();
         //autoriser les ressources statiques
@@ -54,5 +58,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
        // http.authorizeRequests().anyRequest().authenticated();
         http.exceptionHandling().accessDeniedPage("/403");
     }
-
 }

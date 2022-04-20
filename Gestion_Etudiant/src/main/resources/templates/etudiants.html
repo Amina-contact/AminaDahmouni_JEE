@@ -46,11 +46,11 @@
                 <td th:text="${etudiant.prenom}"></td>
                 <td th:text="${etudiant.email}"></td>
                 <td th:text="${etudiant.genre}"></td>
-                <td sec:authorize="hasAuthority('ADMIN')">
+                <td>
                     <a onclick="return confirm('Etes vous sure de supprimer ce étudiant ?')"
                        class="btn btn-danger" th:href="@{/admin/delete(id=${etudiant.id},keyword=${keyword},page=${currentPage})}"><i class="fa fa-window-close-o"></i> Dele</a>
                 </td>
-                <td sec:authorize="hasAuthority('ADMIN')">
+                <td>
                     <a class="btn btn-info" th:href="@{/admin/editEtudiant(id=${etudiant.id},keyword=${keyword},page=${currentPage})}"><i class='far fa-edit'></i> Edit</a>
                 </td>
             </tr>
