@@ -1,5 +1,4 @@
 package com.example.gestion_etudiant.Entities;
-
 public enum Genre {
     MASCULIN("Masculin"),
     FEMININ("Féminin");

@@ -1,5 +1,4 @@
 package com.example.gestion_etudiant.Repositories;
-
 import com.example.gestion_etudiant.Entities.Etudiant;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
