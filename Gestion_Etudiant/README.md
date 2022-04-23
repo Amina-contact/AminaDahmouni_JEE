@@ -23,92 +23,92 @@ Chaque étudiant est défini par:
 > ## 1- Créer l'entité Etudiant : 
 * L'entité `Etudiant`.
 
-<img src="./captures/1.png" width="600">
+<img src="./assets/1.png" width="600">
 
 * L'entité `Genre` de type enum.
 
-<img src="./captures/2.png" width="600">
+<img src="./assets/2.png" width="600">
 
 > ## 2- Créer le repository  EtudiantRepository : 
-<img src="./captures/3.png" width="600">
+<img src="./assets/3.png" width="600">
 
 > ## 3- Créer le controller  EtudiantController :
 
 * Home page:
 
-<img src="./captures/4.png" width="600">
+<img src="./assets/4.png" width="600">
 
 * Liste des étudiants + pagination + recherche par mot clé:
 
-  <img src="./captures/5.png" width="600">
+  <img src="./assets/5.png" width="600">
 
 * Supprimer un étudiant par id:
 
-  <img src="./captures/6.png" width="600">
+  <img src="./assets/6.png" width="600">
 
 * Ajouter un nouveau étudiant:
 
-  <img src="./captures/7.png" width="600">
+  <img src="./assets/7.png" width="600">
 
 * Modifier un étudiant:
 
-  <img src="./captures/8.png" width="600">
+  <img src="./assets/8.png" width="600">
 
 * Login:
 
- <img src="./captures/9.png" width="200">
+ <img src="./assets/9.png" width="200">
 
 * Insertion des étudiants dans la base de données:
 
-<img src="./captures/10.png" width="600">
+<img src="./assets/10.png" width="600">
 
 * Les propriétés spring boot:
 
-  <img src="./captures/11.png" width="600">
+  <img src="./assets/11.png" width="600">
 
 > ## 4- Spring Security
 * Les entités user & role:
 
-  <img src="./captures/13.png" width="600">
-  <img src="./captures/12.png" width="600">
+  <img src="./assets/13.png" width="600">
+  <img src="./assets/12.png" width="600">
   
 * UserRepository:
 
-  <img src="./captures/14.png" width="600">
+  <img src="./assets/14.png" width="600">
   
 * RoleRepository:
 
-  <img src="./captures/15.png" width="600">
+  <img src="./assets/15.png" width="600">
   
 * SecurityConfig:
 
-  <img src="./captures/16.png" width="600">
+  <img src="./assets/16.png" width="600">
 
 > ## 5- La page d'acceuil
-  <img src="./captures/17.png" width="600">
+  <img src="./assets/17.png" width="600">
 
 > ## 6- Authentification avec le role ADMIN
-  <img src="./captures/18.png" width="600">
+  <img src="./assets/18.png" width="600">
 
 > ## 7- La liste des étudiants
-<img src="./captures/19.png" width="600">
+<img src="./assets/19.png" width="600">
 
 > ## 8- Ajouter étudiant
-<img src="./captures/20.png" width="600">
+<img src="./assets/20.png" width="600">
 
 > ## 9- Modifier étudiant
 
-<img src="./captures/21.png" width="600">
+<img src="./assets/21.png" width="600">
 
 > ## 10- Authentification avec le role USER
 
 * Cet utilisateur à le droit de consulter la liste des étudiant mais peut pas faire des operation comme la suppression,la modification ou l'ajout.
 
-  <img src="./captures/22.png" width="600">
-  <img src="./captures/23.png" width="600">
+  <img src="./assets/22.png" width="600">
+  <img src="./assets/23.png" width="600">
 
 > ## 11- Page d'erreur 404
-<img src="./captures/24.png" width="600">
+<img src="./assets/24.png" width="600">
 
 > ## 12- La structure du projet
-<img src="./captures/25.png" width="600">
+<img src="./assets/25.png" width="600">
