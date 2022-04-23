@@ -10,10 +10,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Date;
-
 @SpringBootApplication
 public class PatientMvcApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(PatientMvcApplication.class, args);
     }
@@ -22,14 +20,14 @@ public class PatientMvcApplication {
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-    @Bean
+    //@Bean
     CommandLineRunner commandLineRunner(PatientRepository patientRepository){
         return args -> {
-            /*patientRepository.save(new Patient(null,"Amina",new Date(),false,12));
+            patientRepository.save(new Patient(null,"Amina",new Date(),false,12));
             patientRepository.save(new Patient(null,"Mohammed",new Date(),false,15));
             patientRepository.save(new Patient(null,"Hanane",new Date(),true,19));
             patientRepository.save(new Patient(null,"Karima",new Date(),false,10));
-            patientRepository.save(new Patient(null,"Mounir",new Date(),true,16));*/
+            patientRepository.save(new Patient(null,"Mounir",new Date(),true,16));
 
             patientRepository.findAll().forEach(p->{
                 System.out.println(p.getNom());

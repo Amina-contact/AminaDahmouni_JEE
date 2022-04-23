@@ -38,7 +38,6 @@ public class PatientController {
 
     @GetMapping( "/")
     public  String home(){
-
         return "home";
     }
     /* Rendu coté client
