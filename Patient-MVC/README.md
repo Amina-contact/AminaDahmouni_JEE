@@ -3,7 +3,7 @@
 > ## 1- Créer l'entité Patient : 
 * L'entité `Patient`.
 
-<img src="./captures/1.png" width="600">
+<img src="/captures/1.png" width="600">
 
 > ## 2- Créer le repository  PatientRepository : 
 <img src="./captures/2.png" width="600">
